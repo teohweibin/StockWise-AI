@@ -48,7 +48,23 @@ export default function InventoryPage() {
   };
 
   useEffect(() => {
-    fetchInventory();
+    let cancelled = false;
+
+    fetch('/api/inventory')
+      .then((r) => r.json())
+      .then((d) => {
+        if (!cancelled) {
+          setItems(Array.isArray(d) ? d : []);
+          setLoading(false);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setLoading(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const selectedItem = items.find((item) => item.id === movementProductId);

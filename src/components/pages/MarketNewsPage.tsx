@@ -36,7 +36,29 @@ export default function MarketNewsPage() {
   };
 
   useEffect(() => {
-    fetchNews();
+    let cancelled = false;
+
+    fetch('/api/market-news')
+      .then((res) => {
+        if (!res.ok) throw new Error('Failed to fetch news');
+        return res.json();
+      })
+      .then((data) => {
+        if (!cancelled) {
+          setNews(Array.isArray(data) ? data : []);
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        if (!cancelled) {
+          setError(err instanceof Error ? err.message : 'Failed to fetch news');
+          setLoading(false);
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // Filter news based on tab keywords
