@@ -1,5 +1,5 @@
 import { db } from '@/lib/db';
-import { ilmu } from '@/lib/ilmu';
+import { getIlmu } from '@/lib/ilmu';
 import { NextResponse } from 'next/server';
 
 interface NewsItem {
@@ -149,7 +149,7 @@ INSTRUCTIONS:
 Respond ONLY with a valid JSON array. Each item:
 {"productId","type","priority","message","savingsMyr","reasoning","newsReferences"}`;
 
-    const completion = await ilmu.chat.completions.create({
+    const completion = await getIlmu().chat.completions.create({
       model: 'ilmu-glm-5.1',
       messages: [
         { role: 'system', content: 'You are a supply chain intelligence AI. You cross-reference real-time market news with inventory data to produce actionable, evidence-backed recommendations. Always cite specific data and news in your reasoning. Respond with valid JSON only.' },

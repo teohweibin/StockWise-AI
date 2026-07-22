@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: stockwise-ai-demo
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/inventory
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: ILMU_API_KEY
+        sync: false
+      - key: ILMU_BASE_URL
+        value: https://api.ilmu.ai/v1
+      - key: ZAI_API_KEY
+        sync: false
+      - key: ZAI_BASE_URL
+        value: https://api.ilmu.ai/v1
+      - key: ALPHA_VANTAGE_API_KEY
+        sync: false
