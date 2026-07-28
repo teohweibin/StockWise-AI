@@ -30,7 +30,7 @@ export default function HomePage() {
         <section id="top" className="grid min-h-[570px] items-center gap-10 px-6 pb-20 pt-12 sm:px-10 lg:grid-cols-[.85fr_1.15fr] lg:pb-28 lg:pt-14">
           <Reveal>
             <p className="mb-5 font-mono text-[11px] tracking-[.17em] text-violet-200"><span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-violet-300 shadow-[0_0_0_5px_rgba(196,168,255,.16)]" />AI-POWERED INVENTORY INTELLIGENCE</p>
-            <h1 className="max-w-xl text-5xl font-semibold leading-[1.08] tracking-[-.045em] sm:text-6xl">Know what to stock</h1>
+            <h1 className="max-w-xl text-5xl font-semibold leading-[1.08] tracking-[-.045em] sm:text-6xl"><span className="block whitespace-nowrap">Know what to stock—</span><span className="block text-white">and why.</span></h1>
             <p className="mt-7 max-w-xl text-base leading-8 tracking-wide text-violet-100/80">StockWise helps Malaysian importers and distributors turn inventory data, demand signals, exchange rates, and market news into clear, prioritised next steps.</p>
             <div className="mt-8 flex flex-wrap gap-3"><Link href="/demo" className="inline-flex items-center gap-8 rounded-full bg-[#f8f5ff] px-5 py-3 text-sm font-bold text-[#1b123d]">Explore the live demo <ArrowRight size={16} /></Link><a href="#how" className="rounded-full border border-white/20 bg-black/20 px-5 py-3 text-sm font-bold">See how it works ↓</a></div>
             <p className="mt-4 text-xs tracking-wide text-violet-200/65">Built for UMHackathon 2026 · Demo environment</p>
