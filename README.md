@@ -9,7 +9,7 @@ Built for **UMHackathon 2026** | Category: AI-Powered Business Intelligence
 
 | Deliverable | Direct Link |
 |-------|-----------|
-| **Live Demo** | https://c1ye938tnkg0-deploy.space.z.ai/|
+| **Live Demo** | https://stockwise-ai-demo.onrender.com/ |
 | **Demo Video** | https://drive.google.com/file/d/1aKh1kCwmHk1g47e16dBXVQ7pNNWQsBBk/view?usp=sharing|
 | **Refined Quality Assurance Testing Document (QATD)** | https://drive.google.com/file/d/1CrWOm2-PrcNTqewdEw7bs41SZOd7qKdh/view?usp=sharing|
 | **Deployment Plan** | https://drive.google.com/file/d/1X1Rd5Qb0OZDUQlIDAEPOGe3dFBjCcwJp/view?usp=sharing|
