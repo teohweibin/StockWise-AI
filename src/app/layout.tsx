@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "StockWise - Stock Refill Optimizer",
-  description: "AI-powered inventory management and stock refill optimization dashboard",
+  title: "StockWise — AI Inventory Intelligence",
+  description: "AI-powered inventory intelligence for smarter stock, supplier, and purchasing decisions.",
 };
 
 export default function RootLayout({
